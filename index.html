@@ -1,682 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Vanessa & Mwiza | 19 December 2026</title>
-
-  <meta name="description"
-        content="Vanessa & Mwiza invite you to be part of their special day — 19 December 2026.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-  <style>
-    :root {
-      --wine: #6f2638;
-      --wine-light: #9b5267;
-      --sage: #899685;
-      --sage-dark: #596658;
-      --cream: #f8f4ee;
-      --paper: #fffdfa;
-      --text: #4d4a47;
-      --soft: #eee7df;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--cream);
-      color: var(--text);
-      font-family: "Montserrat", sans-serif;
-      font-weight: 300;
-      line-height: 1.7;
-    }
-
-    section {
-      padding: 90px 20px;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    /* ---------- FLOWERS ---------- */
-
-    .flower {
-      position: absolute;
-      font-size: 45px;
-      opacity: 0.5;
-      pointer-events: none;
-    }
-
-    .flower.one {
-      top: 50px;
-      left: 6%;
-      transform: rotate(-20deg);
-    }
-
-    .flower.two {
-      bottom: 45px;
-      right: 7%;
-      transform: rotate(20deg);
-    }
-
-    .flower.three {
-      top: 25px;
-      right: 10%;
-      font-size: 32px;
-      opacity: 0.35;
-    }
-
-    /* ---------- HERO ---------- */
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at top left, rgba(137,150,133,.12), transparent 35%),
-        radial-gradient(circle at bottom right, rgba(111,38,56,.08), transparent 35%),
-        var(--paper);
-    }
-
-    .hero-content {
-      max-width: 850px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 12px;
-      color: var(--sage-dark);
-      margin-bottom: 25px;
-    }
-
-    .hero h1 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(70px, 12vw, 135px);
-      font-weight: 400;
-      line-height: .8;
-      color: var(--wine);
-    }
-
-    .hero .ampersand {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 65px;
-      color: var(--sage);
-      margin: 20px 0;
-    }
-
-    .hero p {
-      max-width: 650px;
-      margin: 35px auto 0;
-      font-size: 15px;
-      color: #77716d;
-    }
-
-    .date {
-      margin-top: 35px;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 27px;
-      letter-spacing: 2px;
-      color: var(--wine);
-    }
-
-    .rings {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin: 38px auto 15px;
-      display: block;
-      box-shadow: 0 15px 40px rgba(80,50,55,.15);
-      border: 6px solid rgba(255,255,255,.8);
-    }
-
-    .discover {
-      display: inline-block;
-      margin-top: 35px;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 11px;
-      color: var(--wine);
-    }
-
-    /* ---------- INTRO ---------- */
-
-    .intro {
-      text-align: center;
-      background: var(--paper);
-      position: relative;
-    }
-
-    .small-title {
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 11px;
-      color: var(--sage-dark);
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-family: "Cormorant Garamond", serif;
-      font-weight: 400;
-      color: var(--wine);
-      font-size: clamp(45px, 7vw, 70px);
-      line-height: 1;
-      margin-bottom: 25px;
-    }
-
-    .intro-text {
-      max-width: 650px;
-      margin: auto;
-      font-size: 15px;
-      color: #77716d;
-    }
-
-    .floral-divider {
-      margin: 35px auto 0;
-      color: var(--sage);
-      font-size: 25px;
-      letter-spacing: 12px;
-    }
-
-    /* ---------- TIMELINE ---------- */
-
-    .timeline-section {
-      background: var(--sage);
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .timeline-section h2 {
-      color: white;
-    }
-
-    .timeline-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      margin-top: 45px;
-    }
-
-    .event-card {
-      background: rgba(255,255,255,.16);
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 20px;
-      padding: 45px 35px;
-      backdrop-filter: blur(5px);
-    }
-
-    .event-number {
-      font-size: 11px;
-      letter-spacing: 3px;
-      opacity: .75;
-      margin-bottom: 18px;
-    }
-
-    .event-card h3 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 35px;
-      font-weight: 500;
-      margin-bottom: 8px;
-    }
-
-    .event-time {
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .event-location {
-      font-size: 14px;
-      opacity: .9;
-    }
-
-    /* ---------- LOCATION ---------- */
-
-    .location {
-      background: var(--paper);
-    }
-
-    .location-heading {
-      text-align: center;
-    }
-
-    .location-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      margin-top: 45px;
-    }
-
-    .location-card {
-      background: white;
-      padding: 40px 35px;
-      border: 1px solid var(--soft);
-      border-radius: 18px;
-      box-shadow: 0 15px 40px rgba(60,40,45,.05);
-    }
-
-    .location-card span {
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 10px;
-      color: var(--sage-dark);
-    }
-
-    .location-card h3 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 38px;
-      color: var(--wine);
-      font-weight: 400;
-      margin: 12px 0;
-    }
-
-    .location-card p {
-      font-size: 14px;
-      margin-bottom: 25px;
-      color: #77716d;
-    }
-
-    .map-button {
-      display: inline-block;
-      background: var(--wine);
-      color: white;
-      text-decoration: none;
-      padding: 12px 22px;
-      border-radius: 30px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .map-button:hover {
-      background: var(--wine-light);
-    }
-
-    /* ---------- RSVP ---------- */
-
-    .rsvp {
-      text-align: center;
-      background:
-        radial-gradient(circle at 10% 20%, rgba(137,150,133,.12), transparent 30%),
-        radial-gradient(circle at 90% 80%, rgba(111,38,56,.08), transparent 30%),
-        var(--cream);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .rsvp p {
-      max-width: 650px;
-      margin: auto;
-      color: #77716d;
-      font-size: 15px;
-    }
-
-    .rsvp-button {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 17px 38px;
-      border-radius: 40px;
-      background: var(--sage-dark);
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-      transition: .3s;
-      box-shadow: 0 10px 25px rgba(60,70,60,.15);
-    }
-
-    .rsvp-button:hover {
-      transform: translateY(-3px);
-      background: var(--wine);
-    }
-
-    .rsvp-note {
-      margin-top: 22px !important;
-      font-size: 12px !important;
-      color: #999 !important;
-    }
-
-    /* ---------- FOOTER ---------- */
-
-    footer {
-      background: var(--wine);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    footer .names {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 45px;
-      font-weight: 400;
-    }
-
-    footer p {
-      margin-top: 10px;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      opacity: .8;
-    }
-
-    footer .flower-line {
-      margin-top: 25px;
-      font-size: 22px;
-      color: #d9dfd5;
-      letter-spacing: 8px;
-    }
-
-    /* ---------- MOBILE ---------- */
-
-    @media (max-width: 700px) {
-
-      section {
-        padding: 70px 18px;
-      }
-
-      .hero {
-        min-height: 100svh;
-      }
-
-      .hero h1 {
-        font-size: 78px;
-      }
-
-      .hero .ampersand {
-        font-size: 48px;
-        margin: 18px 0;
-      }
-
-      .hero p {
-        padding: 0 20px;
-        font-size: 13px;
-      }
-
-      .rings {
-        width: 125px;
-        height: 125px;
-      }
-
-      .timeline-grid,
-      .location-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .event-card,
-      .location-card {
-        padding: 32px 25px;
-      }
-
-      .location-card h3 {
-        font-size: 34px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vanessa & Mwiza | 19 December 2026</title>
+
+<meta name="description" content="Vanessa & Mwiza invite you to be part of their special day on 19 December 2026.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --wine: #70283c;
+  --wine-light: #965268;
+  --sage: #879582;
+  --sage-dark: #596757;
+  --cream: #f7f2ea;
+  --white: #fffdf9;
+  --text: #57514d;
+  --gold: #b59660;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+section {
+  padding: 90px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+}
+
+/* FLOWERS */
+
+.flower {
+  position: absolute;
+  color: var(--wine);
+  opacity: .22;
+  font-size: 55px;
+  pointer-events: none;
+}
+
+.flower-left {
+  top: 35px;
+  left: 4%;
+  transform: rotate(-25deg);
+}
+
+.flower-right {
+  bottom: 30px;
+  right: 4%;
+  transform: rotate(25deg);
+}
+
+.leaf {
+  color: var(--sage-dark);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(135,149,130,.13), transparent 30%),
+    radial-gradient(circle at 90% 85%, rgba(112,40,60,.08), transparent 30%),
+    var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 850px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: var(--sage-dark);
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(70px, 13vw, 135px);
+  line-height: .72;
+  color: var(--wine);
+}
+
+.ampersand {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--sage);
+  font-size: 65px;
+  margin: 28px 0;
+}
+
+/* CSS WEDDING RINGS */
+
+.rings {
+  width: 170px;
+  height: 115px;
+  margin: 40px auto 30px;
+  position: relative;
+}
+
+.ring {
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  border: 6px solid var(--gold);
+  border-radius: 50%;
+  top: 18px;
+  background: transparent;
+  box-shadow:
+    inset 0 0 0 2px rgba(255,255,255,.7),
+    0 5px 15px rgba(80,60,30,.08);
+}
+
+.ring-one {
+  left: 25px;
+}
+
+.ring-two {
+  left: 68px;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: auto;
+  color: #756e69;
+  font-size: 14px;
+}
+
+.date {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--wine);
+  font-size: 27px;
+  letter-spacing: 2px;
+  margin-top: 30px;
+}
+
+.discover {
+  display: inline-block;
+  margin-top: 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 10px;
+  color: var(--wine);
+}
+
+/* INTRO */
+
+.intro {
+  background: var(--white);
+  text-align: center;
+}
+
+.intro h2 {
+  color: var(--wine);
+  font-size: clamp(45px, 7vw, 75px);
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+.intro-text {
+  max-width: 680px;
+  margin: auto;
+  color: #756e69;
+  font-size: 14px;
+}
+
+.divider {
+  margin-top: 35px;
+  color: var(--wine);
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+/* TIMELINE */
+
+.timeline {
+  background: var(--sage);
+  color: white;
+  text-align: center;
+}
+
+.timeline h2 {
+  color: white;
+  font-size: clamp(45px, 7vw, 70px);
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 45px;
+}
+
+.event {
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 22px;
+  padding: 45px 30px;
+}
+
+.event-number {
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: .7;
+  margin-bottom: 15px;
+}
+
+.event h3 {
+  font-size: 38px;
+  color: white;
+}
+
+.event-time {
+  font-size: 22px;
+  margin-top: 8px;
+}
+
+.event-place {
+  font-size: 13px;
+  margin-top: 8px;
+  opacity: .9;
+}
+
+/* LOCATIONS */
+
+.locations {
+  background: var(--white);
+  text-align: center;
+}
+
+.locations h2 {
+  color: var(--wine);
+  font-size: clamp(45px, 7vw, 70px);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 45px;
+}
+
+.location-card {
+  background: white;
+  border: 1px solid #e9e1d8;
+  border-radius: 22px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 40px rgba(70,45,45,.06);
+}
+
+.location-label {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 10px;
+  color: var(--sage-dark);
+}
+
+.location-card h3 {
+  color: var(--wine);
+  font-size: 38px;
+  margin: 12px 0;
+}
+
+.location-card p {
+  font-size: 13px;
+  color: #756e69;
+}
+
+.map-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 23px;
+  background: var(--wine);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+/* RSVP */
+
+.rsvp {
+  text-align: center;
+  background:
+    radial-gradient(circle at 5% 80%, rgba(135,149,130,.13), transparent 30%),
+    radial-gradient(circle at 95% 15%, rgba(112,40,60,.08), transparent 30%),
+    var(--cream);
+}
+
+.rsvp h2 {
+  color: var(--wine);
+  font-size: clamp(55px, 8vw, 80px);
+}
+
+.rsvp-text {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #756e69;
+  font-size: 14px;
+}
+
+.rsvp-button {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 16px 35px;
+  border-radius: 35px;
+  background: var(--sage-dark);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  transition: .25s;
+}
+
+.rsvp-button:hover {
+  background: var(--wine);
+  transform: translateY(-2px);
+}
+
+.rsvp-note {
+  margin-top: 20px;
+  color: #999;
+  font-size: 11px;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--wine);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.footer-names {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 45px;
+}
+
+footer p {
+  margin-top: 8px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: .8;
+}
+
+.footer-flowers {
+  margin-top: 25px;
+  font-size: 22px;
+  color: #d9dfd5;
+  letter-spacing: 8px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  section {
+    padding: 70px 18px;
+  }
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero h1 {
+    font-size: 76px;
+  }
+
+  .ampersand {
+    font-size: 48px;
+    margin: 22px 0;
+  }
+
+  .rings {
+    transform: scale(.9);
+  }
+
+  .timeline-grid,
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event,
+  .location-card {
+    padding: 35px 25px;
+  }
+
+  .location-card h3 {
+    font-size: 34px;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
+<!-- HERO -->
 
-    <div class="flower one">🌿</div>
-    <div class="flower two">🌿</div>
-    <div class="flower three">✿</div>
+<section class="hero">
 
-    <div class="hero-content">
+  <div class="flower flower-left">
+    ❀
+  </div>
 
-      <div class="eyebrow">You are cordially invited</div>
+  <div class="flower flower-right leaf">
+    ❁
+  </div>
 
-      <h1>Vanessa</h1>
+  <div class="hero-content">
 
-      <div class="ampersand">&amp;</div>
-
-      <h1>Mwiza</h1>
-
-      <!-- Wedding rings image -->
-      <img
-        class="rings"
-        src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=500&q=85"
-        alt="Wedding rings"
-      >
-
-      <p>
-        Together with their families, Vanessa &amp; Mwiza invite you
-        to be part of their special day as they celebrate their marriage
-        and begin this next chapter together.
-      </p>
-
-      <div class="date">
-        Saturday · 19 December 2026
-      </div>
-
-      <a href="#our-day" class="discover">
-        Discover our day ↓
-      </a>
-
-    </div>
-  </section>
-
-
-  <!-- INTRO -->
-  <section class="intro">
-
-    <div class="flower one">✿</div>
-
-    <div class="container">
-
-      <div class="small-title">Celebrate with us</div>
-
-      <h2>
-        A day we would love<br>
-        to share with you.
-      </h2>
-
-      <p class="intro-text">
-        We would love to have the people we hold dear with us
-        as we celebrate this milestone and begin our next chapter
-        together.
-      </p>
-
-      <div class="floral-divider">
-        ❀ ❁ ❀
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- TIMELINE -->
-  <section class="timeline-section" id="our-day">
-
-    <div class="container">
-
-      <div class="small-title">Our day</div>
-
-      <h2>Wedding Timeline</h2>
-
-      <div class="timeline-grid">
-
-        <div class="event-card">
-
-          <div class="event-number">01</div>
-
-          <h3>Marriage Blessing</h3>
-
-          <div class="event-time">09:00</div>
-
-          <div class="event-location">
-            Civic Centre
-          </div>
-
-        </div>
-
-
-        <div class="event-card">
-
-          <div class="event-number">02</div>
-
-          <h3>Lunch Reception</h3>
-
-          <div class="event-time">14:00</div>
-
-          <div class="event-location">
-            Nyirongo Residence
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- LOCATION -->
-  <section class="location">
-
-    <div class="container">
-
-      <div class="location-heading">
-
-        <div class="small-title">Find us</div>
-
-        <h2>Location</h2>
-
-      </div>
-
-
-      <div class="location-grid">
-
-        <!-- Marriage Blessing -->
-        <div class="location-card">
-
-          <span>Marriage Blessing</span>
-
-          <h3>Civic Centre</h3>
-
-          <p>
-            Join us at 09:00 for the marriage blessing.
-          </p>
-
-          <a
-            class="map-button"
-            href="https://www.google.com/maps/search/?api=1&query=Civic+Centre+Luanshya+Zambia"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open in Google Maps
-          </a>
-
-        </div>
-
-
-        <!-- Lunch -->
-        <div class="location-card">
-
-          <span>Lunch Reception</span>
-
-          <h3>Nyirongo Residence</h3>
-
-          <p>
-            Lunch reception from 14:00.
-          </p>
-
-          <a
-            class="map-button"
-            href="https://www.google.com/maps/search/?api=1&query=Nyirongo+Residence+Luanshya+Zambia"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open in Google Maps
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- RSVP -->
-  <section class="rsvp">
-
-    <div class="flower one">🌿</div>
-    <div class="flower two">✿</div>
-
-    <div class="container">
-
-      <div class="small-title">Kindly respond</div>
-
-      <h2>RSVP</h2>
-
-      <p>
-        Please confirm your attendance using our RSVP form.
-        Your response will help us prepare for the day and
-        keep our guest list up to date.
-      </p>
-
-      <a
-        class="rsvp-button"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfQ2rTN-T6a3H1TujjAsVSgYE7HBws_EQ5tqsIueNIgdosoyw/viewform"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        RSVP Now
-      </a>
-
-      <p class="rsvp-note">
-        We can't wait to celebrate with you. 🤍
-      </p>
-
+    <div class="eyebrow">
+      You are cordially invited
     </div>
 
-  </section>
+    <h1>
+      Vanessa
+    </h1>
 
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="names">
-      Vanessa &amp; Mwiza
+    <div class="ampersand">
+      &amp;
     </div>
 
-    <p>
-      19 December 2026
+    <h1>
+      Mwiza
+    </h1>
+
+    <div class="rings" aria-label="Wedding rings">
+      <span class="ring ring-one"></span>
+      <span class="ring ring-two"></span>
+    </div>
+
+    <p class="hero-description">
+      Together with their families, Vanessa &amp; Mwiza invite you
+      to be part of their special day as they celebrate their marriage
+      and begin this next chapter together.
     </p>
 
-    <div class="flower-line">
-      ❀ ✿ ❀
+    <div class="date">
+      Saturday · 19 December 2026
     </div>
 
-  </footer>
+    <a href="#our-day" class="discover">
+      Discover our day ↓
+    </a>
 
+  </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+  <div class="flower flower-left">
+    ❁
+  </div>
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Celebrate with us
+    </div>
+
+    <h2>
+      A day we would love<br>
+      to share with you.
+    </h2>
+
+    <p class="intro-text">
+      We would love to have the people we hold dear with us
+      as we celebrate this milestone and begin our next chapter
+      together.
+    </p>
+
+    <div class="divider">
+      ❀ ❁ ❀
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TIMELINE -->
+
+<section class="timeline" id="our-day">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Our day
+    </div>
+
+    <h2>
+      Wedding Timeline
+    </h2>
+
+    <div class="timeline-grid">
+
+      <div class="event">
+
+        <div class="event-number">
+          01
+        </div>
+
+        <h3>
+          Marriage Blessing
+        </h3>
+
+        <div class="event-time">
+          09:00
+        </div>
+
+        <div class="event-place">
+          Civic Centre
+        </div>
+
+      </div>
+
+
+      <div class="event">
+
+        <div class="event-number">
+          02
+        </div>
+
+        <h3>
+          Lunch Reception
+        </h3>
+
+        <div class="event-time">
+          14:00
+        </div>
+
+        <div class="event-place">
+          Nyirongo's Residence
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- LOCATIONS -->
+
+<section class="locations">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Find us
+    </div>
+
+    <h2>
+      Location
+    </h2>
+
+    <div class="location-grid">
+
+      <div class="location-card">
+
+        <div class="location-label">
+          Marriage Blessing
+        </div>
+
+        <h3>
+          Civic Centre
+        </h3>
+
+        <p>
+          Join us at 09:00 for the marriage blessing.
+        </p>
+
+        <a
+          class="map-button"
+          href="https://www.google.com/maps/search/?api=1&query=Civic+Centre+Luanshya+Zambia"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open in Google Maps
+        </a>
+
+      </div>
+
+
+      <div class="location-card">
+
+        <div class="location-label">
+          Lunch Reception
+        </div>
+
+        <h3>
+          Nyirongo's Residence
+        </h3>
+
+        <p>
+          Lunch reception from 14:00.
+        </p>
+
+        <a
+          class="map-button"
+          href="https://www.google.com/maps/search/?api=1&query=Nyirongo+Residence+Luanshya+Zambia"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open in Google Maps
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- RSVP -->
+
+<section class="rsvp">
+
+  <div class="flower flower-left">
+    ❀
+  </div>
+
+  <div class="flower flower-right leaf">
+    ❁
+  </div>
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Kindly respond
+    </div>
+
+    <h2>
+      RSVP
+    </h2>
+
+    <p class="rsvp-text">
+      We’d love to celebrate with you.
+      Kindly let us know if you’ll be joining us by completing
+      our RSVP form.
+    </p>
+
+    <a
+      class="rsvp-button"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSfQ2rTN-T6a3H1TujjAsVSgYE7HBws_EQ5tqsIueNIgdosoyw/viewform"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      RSVP Now
+    </a>
+
+    <p class="rsvp-note">
+      We can't wait to celebrate with you. 🤍
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-names">
+    Vanessa &amp; Mwiza
+  </div>
+
+  <p>
+    19 December 2026
+  </p>
+
+  <div class="footer-flowers">
+    ❀ ✿ ❀
+  </div>
+
+</footer>
 
 </body>
 </html>
