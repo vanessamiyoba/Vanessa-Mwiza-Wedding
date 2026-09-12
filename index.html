@@ -1,455 +1,591 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Vanessa & Mwiza | 19 December 2026</title>
-
-<meta name="description" content="Vanessa & Mwiza invite you to be part of their special day on 19 December 2026.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-
-:root {
-  --wine: #70283c;
-  --wine-light: #965268;
-  --sage: #879582;
-  --sage-dark: #596757;
-  --cream: #f7f2ea;
-  --white: #fffdf9;
-  --text: #57514d;
-  --gold: #b59660;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--cream);
-  color: var(--text);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  line-height: 1.7;
-}
-
-section {
-  padding: 90px 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.container {
-  max-width: 1050px;
-  margin: auto;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-weight: 400;
-}
-
-/* FLOWERS */
-
-.flower {
-  position: absolute;
-  color: var(--wine);
-  opacity: .22;
-  font-size: 55px;
-  pointer-events: none;
-}
-
-.flower-left {
-  top: 35px;
-  left: 4%;
-  transform: rotate(-25deg);
-}
-
-.flower-right {
-  bottom: 30px;
-  right: 4%;
-  transform: rotate(25deg);
-}
-
-.leaf {
-  color: var(--sage-dark);
-}
-
-/* HERO */
-
-.hero {
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at 10% 15%, rgba(135,149,130,.13), transparent 30%),
-    radial-gradient(circle at 90% 85%, rgba(112,40,60,.08), transparent 30%),
-    var(--white);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-content {
-  width: 100%;
-  max-width: 850px;
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 11px;
-  color: var(--sage-dark);
-  margin-bottom: 25px;
-}
-
-.hero h1 {
-  font-size: clamp(70px, 13vw, 135px);
-  line-height: .72;
-  color: var(--wine);
-}
-
-.ampersand {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  color: var(--sage);
-  font-size: 65px;
-  margin: 28px 0;
-}
-
-/* CSS WEDDING RINGS */
-
-.rings {
-  width: 170px;
-  height: 115px;
-  margin: 40px auto 30px;
-  position: relative;
-}
-
-.ring {
-  position: absolute;
-  width: 78px;
-  height: 78px;
-  border: 6px solid var(--gold);
-  border-radius: 50%;
-  top: 18px;
-  background: transparent;
-  box-shadow:
-    inset 0 0 0 2px rgba(255,255,255,.7),
-    0 5px 15px rgba(80,60,30,.08);
-}
-
-.ring-one {
-  left: 25px;
-}
-
-.ring-two {
-  left: 68px;
-}
-
-.hero-description {
-  max-width: 650px;
-  margin: auto;
-  color: #756e69;
-  font-size: 14px;
-}
-
-.date {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  color: var(--wine);
-  font-size: 27px;
-  letter-spacing: 2px;
-  margin-top: 30px;
-}
-
-.discover {
-  display: inline-block;
-  margin-top: 35px;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 10px;
-  color: var(--wine);
-}
-
-/* INTRO */
-
-.intro {
-  background: var(--white);
-  text-align: center;
-}
-
-.intro h2 {
-  color: var(--wine);
-  font-size: clamp(45px, 7vw, 75px);
-  line-height: 1;
-  margin-bottom: 25px;
-}
-
-.intro-text {
-  max-width: 680px;
-  margin: auto;
-  color: #756e69;
-  font-size: 14px;
-}
-
-.divider {
-  margin-top: 35px;
-  color: var(--wine);
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-
-/* TIMELINE */
-
-.timeline {
-  background: var(--sage);
-  color: white;
-  text-align: center;
-}
-
-.timeline h2 {
-  color: white;
-  font-size: clamp(45px, 7vw, 70px);
-}
-
-.timeline-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-top: 45px;
-}
-
-.event {
-  background: rgba(255,255,255,.14);
-  border: 1px solid rgba(255,255,255,.35);
-  border-radius: 22px;
-  padding: 45px 30px;
-}
-
-.event-number {
-  font-size: 10px;
-  letter-spacing: 3px;
-  opacity: .7;
-  margin-bottom: 15px;
-}
-
-.event h3 {
-  font-size: 38px;
-  color: white;
-}
-
-.event-time {
-  font-size: 22px;
-  margin-top: 8px;
-}
-
-.event-place {
-  font-size: 13px;
-  margin-top: 8px;
-  opacity: .9;
-}
-
-/* LOCATIONS */
-
-.locations {
-  background: var(--white);
-  text-align: center;
-}
-
-.locations h2 {
-  color: var(--wine);
-  font-size: clamp(45px, 7vw, 70px);
-}
-
-.location-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-top: 45px;
-}
-
-.location-card {
-  background: white;
-  border: 1px solid #e9e1d8;
-  border-radius: 22px;
-  padding: 40px 30px;
-  box-shadow: 0 15px 40px rgba(70,45,45,.06);
-}
-
-.location-label {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 10px;
-  color: var(--sage-dark);
-}
-
-.location-card h3 {
-  color: var(--wine);
-  font-size: 38px;
-  margin: 12px 0;
-}
-
-.location-card p {
-  font-size: 13px;
-  color: #756e69;
-}
-
-.map-button {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 23px;
-  background: var(--wine);
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 10px;
-}
-
-/* RSVP */
-
-.rsvp {
-  text-align: center;
-  background:
-    radial-gradient(circle at 5% 80%, rgba(135,149,130,.13), transparent 30%),
-    radial-gradient(circle at 95% 15%, rgba(112,40,60,.08), transparent 30%),
-    var(--cream);
-}
-
-.rsvp h2 {
-  color: var(--wine);
-  font-size: clamp(55px, 8vw, 80px);
-}
-
-.rsvp-text {
-  max-width: 650px;
-  margin: 0 auto;
-  color: #756e69;
-  font-size: 14px;
-}
-
-.rsvp-button {
-  display: inline-block;
-  margin-top: 35px;
-  padding: 16px 35px;
-  border-radius: 35px;
-  background: var(--sage-dark);
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 11px;
-  transition: .25s;
-}
-
-.rsvp-button:hover {
-  background: var(--wine);
-  transform: translateY(-2px);
-}
-
-.rsvp-note {
-  margin-top: 20px;
-  color: #999;
-  font-size: 11px;
-}
-
-/* FOOTER */
-
-footer {
-  background: var(--wine);
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.footer-names {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 45px;
-}
-
-footer p {
-  margin-top: 8px;
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  opacity: .8;
-}
-
-.footer-flowers {
-  margin-top: 25px;
-  font-size: 22px;
-  color: #d9dfd5;
-  letter-spacing: 8px;
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-  section {
-    padding: 70px 18px;
-  }
-
-  .hero {
-    min-height: 100svh;
-  }
-
-  .hero h1 {
-    font-size: 76px;
-  }
-
-  .ampersand {
-    font-size: 48px;
-    margin: 22px 0;
-  }
-
-  .rings {
-    transform: scale(.9);
-  }
-
-  .timeline-grid,
-  .location-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .event,
-  .location-card {
-    padding: 35px 25px;
-  }
-
-  .location-card h3 {
-    font-size: 34px;
-  }
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vanessa & Mwiza | 19 December 2026</title>
+
+  <meta
+    name="description"
+    content="Vanessa & Mwiza invite you to be part of their special day on Saturday, 19 December 2026."
+  >
+
+  <!-- Elegant fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --background: #181714;
+      --background-soft: #201d1a;
+      --green: #0b2109;
+      --wine: #791d3b;
+      --pink: #e9a5bd;
+      --sage: #a2ad9b;
+      --gold: #b99a5e;
+      --cream: #eee7df;
+      --muted: #aaa29d;
+      --line: rgba(218, 190, 145, 0.28);
+      --white: #faf7f2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--cream);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    section {
+      position: relative;
+      overflow: hidden;
+      padding: 95px 20px;
+    }
+
+    .container {
+      width: min(1050px, 100%);
+      margin: auto;
+    }
+
+    /* -------------------------
+       DECORATIVE FLOWERS
+    ------------------------- */
+
+    .flower {
+      position: absolute;
+      color: var(--pink);
+      opacity: 0.25;
+      font-size: 70px;
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .flower-left {
+      left: 25px;
+      top: 65px;
+      transform: rotate(-18deg);
+    }
+
+    .flower-right {
+      right: 25px;
+      bottom: 60px;
+      transform: rotate(18deg);
+    }
+
+    .flower-small {
+      font-size: 40px;
+      opacity: 0.18;
+    }
+
+    /* -------------------------
+       GENERAL TYPOGRAPHY
+    ------------------------- */
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 11px;
+      color: var(--sage);
+      margin-bottom: 22px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(48px, 7vw, 76px);
+      line-height: 1;
+      font-weight: 400;
+      color: var(--pink);
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .text {
+      color: var(--muted);
+      max-width: 680px;
+      margin: auto;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    /* -------------------------
+       HERO
+    ------------------------- */
+
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at 8% 15%,
+          rgba(121,29,59,.12),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 92% 85%,
+          rgba(162,173,155,.08),
+          transparent 28%
+        ),
+        var(--background);
+    }
+
+    .hero-content {
+      width: min(850px, 100%);
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(76px, 13vw, 140px);
+      color: var(--pink);
+      line-height: .72;
+    }
+
+    .ampersand {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      color: var(--sage);
+      font-size: 70px;
+      line-height: 1;
+      margin: 25px 0;
+    }
+
+    /* -------------------------
+       GOLD WEDDING RINGS
+    ------------------------- */
+
+    .rings {
+      width: 190px;
+      height: 115px;
+      margin: 38px auto 35px;
+      position: relative;
+    }
+
+    .ring {
+      position: absolute;
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      top: 12px;
+      border: 7px solid var(--gold);
+      background: transparent;
+      box-shadow:
+        inset 0 0 0 2px rgba(255,255,255,.18),
+        0 10px 25px rgba(0,0,0,.28);
+    }
+
+    /* Men's wider band */
+    .ring-male {
+      left: 32px;
+      border-width: 8px;
+    }
+
+    /* Women's slimmer diamond-style band */
+    .ring-female {
+      left: 79px;
+      border-width: 5px;
+    }
+
+    .ring-female::after {
+      content: "✦";
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #f4e8ce;
+      font-size: 25px;
+      text-shadow:
+        0 0 5px rgba(255,255,255,.8),
+        0 0 12px rgba(240,220,180,.45);
+    }
+
+    .ring-female::before {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: #f4e8ce;
+      border-radius: 50%;
+      top: 7px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 14px rgba(255,255,255,.45);
+      opacity: .9;
+    }
+
+    .hero-description {
+      max-width: 690px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .date {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 30px;
+      color: var(--pink);
+      letter-spacing: 2px;
+      margin-top: 28px;
+    }
+
+    .discover {
+      display: inline-block;
+      margin-top: 35px;
+      text-decoration: none;
+      color: var(--pink);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+    }
+
+    /* -------------------------
+       INTRO
+    ------------------------- */
+
+    .intro {
+      background: var(--background-soft);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .intro h2 {
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .divider {
+      margin-top: 35px;
+      text-align: center;
+      color: var(--pink);
+      font-size: 22px;
+      letter-spacing: 10px;
+    }
+
+    /* -------------------------
+       TIMELINE
+    ------------------------- */
+
+    .timeline {
+      background: var(--green);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline h2 {
+      color: var(--white);
+    }
+
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 50px;
+    }
+
+    .event {
+      border: 1px solid rgba(211,222,201,.18);
+      border-radius: 24px;
+      padding: 45px 30px;
+      text-align: center;
+      background: rgba(255,255,255,.025);
+    }
+
+    .event-number {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 5px;
+      margin-bottom: 20px;
+    }
+
+    .event h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      color: var(--pink);
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .event-time {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 30px;
+      color: var(--white);
+    }
+
+    .event-location {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* -------------------------
+       LOCATION
+    ------------------------- */
+
+    .locations {
+      background: var(--background);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 50px;
+    }
+
+    .location-card {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 42px 30px;
+      text-align: center;
+      background: rgba(255,255,255,.018);
+    }
+
+    .location-label {
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+      margin-bottom: 12px;
+    }
+
+    .location-card h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      color: var(--pink);
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .location-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .map-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 13px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+      color: white;
+      background: var(--wine);
+      border: 1px solid rgba(255,255,255,.08);
+      transition: .25s ease;
+    }
+
+    .map-button:hover {
+      background: #932449;
+      transform: translateY(-2px);
+    }
+
+    /* -------------------------
+       RSVP
+    ------------------------- */
+
+    .rsvp {
+      background: var(--background-soft);
+      text-align: center;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .rsvp h2 {
+      font-size: clamp(58px, 8vw, 85px);
+    }
+
+    .rsvp-button {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 16px 36px;
+      background: var(--sage-dark);
+      color: white;
+      border-radius: 35px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      transition: .25s ease;
+    }
+
+    .rsvp-button:hover {
+      background: var(--wine);
+      transform: translateY(-2px);
+    }
+
+    .rsvp-note {
+      margin-top: 20px;
+      color: #817a75;
+      font-size: 11px;
+    }
+
+    /* -------------------------
+       GUEST CODE NOTE
+    ------------------------- */
+
+    .guest-info {
+      background: var(--background);
+      text-align: center;
+    }
+
+    .guest-info h2 {
+      font-size: clamp(45px, 7vw, 68px);
+    }
+
+    .guest-box {
+      max-width: 650px;
+      margin: 35px auto 0;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 30px;
+      background: rgba(255,255,255,.018);
+    }
+
+    .guest-box p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .guest-code {
+      margin-top: 15px;
+      color: var(--gold);
+      letter-spacing: 4px;
+      font-size: 13px;
+    }
+
+    /* -------------------------
+       FOOTER
+    ------------------------- */
+
+    footer {
+      background: var(--wine);
+      text-align: center;
+      padding: 60px 20px;
+      color: white;
+    }
+
+    .footer-names {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 48px;
+      color: white;
+    }
+
+    footer p {
+      margin-top: 10px;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      opacity: .8;
+    }
+
+    .footer-flowers {
+      margin-top: 25px;
+      color: #d3d9cb;
+      font-size: 22px;
+      letter-spacing: 10px;
+    }
+
+    /* -------------------------
+       MOBILE
+    ------------------------- */
+
+    @media (max-width: 700px) {
+
+      section {
+        padding: 72px 18px;
+      }
+
+      .hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .hero h1 {
+        font-size: 78px;
+      }
+
+      .ampersand {
+        font-size: 52px;
+        margin: 25px 0;
+      }
+
+      .hero-description {
+        font-size: 13px;
+      }
+
+      .date {
+        font-size: 25px;
+      }
+
+      .rings {
+        transform: scale(.92);
+      }
+
+      .timeline-grid,
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .event,
+      .location-card {
+        padding: 35px 25px;
+      }
+
+      .event h3,
+      .location-card h3 {
+        font-size: 34px;
+      }
+
+      .flower {
+        font-size: 45px;
+      }
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-<!-- HERO -->
 
-<section class="hero">
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
 
   <div class="flower flower-left">
     ❀
   </div>
 
-  <div class="flower flower-right leaf">
+  <div class="flower flower-right flower-small">
     ❁
   </div>
 
@@ -471,22 +607,33 @@ footer p {
       Mwiza
     </h1>
 
+
+    <!-- GOLD MALE + FEMALE RINGS -->
+
     <div class="rings" aria-label="Wedding rings">
-      <span class="ring ring-one"></span>
-      <span class="ring ring-two"></span>
+
+      <span class="ring ring-male"></span>
+
+      <span class="ring ring-female"></span>
+
     </div>
 
+
     <p class="hero-description">
+
       Together with their families, Vanessa &amp; Mwiza invite you
       to be part of their special day as they celebrate their marriage
       and begin this next chapter together.
+
     </p>
+
 
     <div class="date">
       Saturday · 19 December 2026
     </div>
 
-    <a href="#our-day" class="discover">
+
+    <a class="discover" href="#our-day">
       Discover our day ↓
     </a>
 
@@ -495,12 +642,14 @@ footer p {
 </section>
 
 
-<!-- INTRO -->
+<!-- =========================
+     INTRO
+========================= -->
 
 <section class="intro">
 
-  <div class="flower flower-left">
-    ❁
+  <div class="flower flower-left flower-small">
+    ❀
   </div>
 
   <div class="container">
@@ -514,14 +663,16 @@ footer p {
       to share with you.
     </h2>
 
-    <p class="intro-text">
+    <p class="text">
+
       We would love to have the people we hold dear with us
       as we celebrate this milestone and begin our next chapter
       together.
+
     </p>
 
     <div class="divider">
-      ❀ ❁ ❀
+      ── ❀ ❁ ❀ ──
     </div>
 
   </div>
@@ -529,7 +680,9 @@ footer p {
 </section>
 
 
-<!-- TIMELINE -->
+<!-- =========================
+     TIMELINE
+========================= -->
 
 <section class="timeline" id="our-day">
 
@@ -543,9 +696,11 @@ footer p {
       Wedding Timeline
     </h2>
 
+
     <div class="timeline-grid">
 
-      <div class="event">
+
+      <article class="event">
 
         <div class="event-number">
           01
@@ -559,14 +714,14 @@ footer p {
           09:00
         </div>
 
-        <div class="event-place">
+        <div class="event-location">
           Civic Centre
         </div>
 
-      </div>
+      </article>
 
 
-      <div class="event">
+      <article class="event">
 
         <div class="event-number">
           02
@@ -580,11 +735,12 @@ footer p {
           14:00
         </div>
 
-        <div class="event-place">
+        <div class="event-location">
           Nyirongo's Residence
         </div>
 
-      </div>
+      </article>
+
 
     </div>
 
@@ -593,9 +749,15 @@ footer p {
 </section>
 
 
-<!-- LOCATIONS -->
+<!-- =========================
+     LOCATION
+========================= -->
 
-<section class="locations">
+<section class="locations" id="location">
+
+  <div class="flower flower-right">
+    ❁
+  </div>
 
   <div class="container">
 
@@ -607,9 +769,13 @@ footer p {
       Location
     </h2>
 
+
     <div class="location-grid">
 
-      <div class="location-card">
+
+      <!-- LUSAKA CIVIC CENTRE -->
+
+      <article class="location-card">
 
         <div class="location-label">
           Marriage Blessing
@@ -625,17 +791,19 @@ footer p {
 
         <a
           class="map-button"
-          href="https://www.google.com/maps/search/?api=1&query=Civic+Centre+Luanshya+Zambia"
+          href="https://maps.app.goo.gl/dh8pu2Rpsywj5osS9?g_st=ac"
           target="_blank"
           rel="noopener noreferrer"
         >
           Open in Google Maps
         </a>
 
-      </div>
+      </article>
 
 
-      <div class="location-card">
+      <!-- NYIRONGO'S RESIDENCE -->
+
+      <article class="location-card">
 
         <div class="location-label">
           Lunch Reception
@@ -651,14 +819,15 @@ footer p {
 
         <a
           class="map-button"
-          href="https://www.google.com/maps/search/?api=1&query=Nyirongo+Residence+Luanshya+Zambia"
+          href="https://maps.app.goo.gl/SpT1fy74PegFmxXH7?g_st=ac"
           target="_blank"
           rel="noopener noreferrer"
         >
           Open in Google Maps
         </a>
 
-      </div>
+      </article>
+
 
     </div>
 
@@ -667,17 +836,20 @@ footer p {
 </section>
 
 
-<!-- RSVP -->
+<!-- =========================
+     RSVP
+========================= -->
 
-<section class="rsvp">
+<section class="rsvp" id="rsvp">
 
-  <div class="flower flower-left">
+  <div class="flower flower-left flower-small">
     ❀
   </div>
 
-  <div class="flower flower-right leaf">
+  <div class="flower flower-right flower-small">
     ❁
   </div>
+
 
   <div class="container">
 
@@ -689,11 +861,14 @@ footer p {
       RSVP
     </h2>
 
-    <p class="rsvp-text">
+    <p class="text">
+
       We’d love to celebrate with you.
       Kindly let us know if you’ll be joining us by completing
       our RSVP form.
+
     </p>
+
 
     <a
       class="rsvp-button"
@@ -704,8 +879,9 @@ footer p {
       RSVP Now
     </a>
 
+
     <p class="rsvp-note">
-      We can't wait to celebrate with you. 🤍
+      Your RSVP helps us prepare for the day.
     </p>
 
   </div>
@@ -713,7 +889,45 @@ footer p {
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     GUEST INFORMATION
+========================= -->
+
+<section class="guest-info">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Your invitation
+    </div>
+
+    <h2>
+      Your Guest Pass
+    </h2>
+
+
+    <div class="guest-box">
+
+      <p>
+        Guests who confirm their attendance will receive
+        a personalised wedding guest code and QR check-in
+        pass by email.
+      </p>
+
+      <div class="guest-code">
+        KEEP YOUR CODE SAFE
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -730,6 +944,7 @@ footer p {
   </div>
 
 </footer>
+
 
 </body>
 </html>
